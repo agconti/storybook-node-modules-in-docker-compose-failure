@@ -1,0 +1,13 @@
+version: '3'
+services:
+  storybook:
+    build: .
+    restart: always
+    command: npm run storybook
+    ports:
+      - "3000:3000"
+    volumes: 
+      - .:/app
+      # storybook fails to load because it cant create a file here
+      # uncomment this link to see it succeed
+      - /app/node_modules 
