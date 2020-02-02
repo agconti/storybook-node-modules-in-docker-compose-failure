@@ -11,3 +11,5 @@ services:
       # storybook fails to load because it cant create a file here
       # uncomment this link to see it succeed
       - /app/node_modules 
+      - ./node_modules/.cache:/app/node_modules/.cache
+      - ./node_modules/@storybook/core/:/app/node_modules/@storybook/core/

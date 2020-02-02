@@ -10,6 +10,8 @@ RUN npm install --no-progress
 
 COPY . .
 
+RUN mkdir -p ./node_modules/.cache/storybook
+
 EXPOSE 3000
 
 CMD ["npm", "run", "storybook"]
